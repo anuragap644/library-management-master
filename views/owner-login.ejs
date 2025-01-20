@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-['helvetica_now_display']">
+    <nav class="w-full flex justify-between px-5 py-3">
+        <h3 class="text-xl">E lib</h3>
+        
+            <div class="flex gap-5">
+                <a class="text-red-600" href="/users/logout">Logout</a>
+                <a class="text-2xl" href="/ownerlogin">Owner Login</a>
+            </div>
+            
+    </nav>
+<div class="w-full h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-white to-blue-50">
+    <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-2xl">
+        <h4 class="text-3xl font-semibold text-center text-blue-800 mb-6">Admin Access</h4>
+        <p class="text-center text-gray-600 mb-4">Enter your credentials to manage the system.</p>
+        <form action="/owners/login" method="post">
+            <!-- Email Input -->
+            <div class="relative mb-5">
+                <input 
+                    class="block w-full px-4 py-3 text-gray-700 bg-zinc-100 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent peer" 
+                    type="email" placeholder=" " name="email" required>
+                <label 
+                    class="absolute left-4 top-3 text-gray-500 text-sm transition-all transform -translate-y-3 scale-75 bg-white px-1 peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-gray-400 peer-focus:translate-y-0 peer-focus:scale-75 peer-focus:text-blue-500">
+                    Email Address
+                </label>
+            </div>
+
+            <!-- Password Input -->
+            <div class="relative mb-5">
+                <input 
+                    class="block w-full px-4 py-3 text-gray-700 bg-zinc-100 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent peer" 
+                    type="password" placeholder=" " name="password" required>
+                <label 
+                    class="absolute left-4 top-3 text-gray-500 text-sm transition-all transform -translate-y-3 scale-75 bg-white px-1 peer-placeholder-shown:translate-y-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-gray-400 peer-focus:translate-y-0 peer-focus:scale-75 peer-focus:text-blue-500">
+                    Password
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <input 
+                class="w-full px-5 py-3 mt-4 text-white bg-blue-600 rounded-full hover:bg-blue-700 shadow-lg transition duration-300 ease-in-out cursor-pointer" 
+                type="submit" value="Login">
+        </form>
+
+        <!-- Footer Text -->
+        <p class="text-center text-sm text-gray-500 mt-6">
+            Need help? <a href="/contact" class="text-blue-600 hover:underline">Contact Support</a>
+        </p>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>
